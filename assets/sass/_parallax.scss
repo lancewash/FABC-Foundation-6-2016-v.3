@@ -1,0 +1,50 @@
+/*
+=======================================================================
+============================= Parallax ================================
+=======================================================================
+*/
+
+
+.parallax-window {
+  margin-bottom: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+  min-height: 500px;
+  background: transparent;
+}
+
+.parallax-container {
+  position: relative;
+
+  #subpage & {
+    max-height: 450px;
+  }
+
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    color: $white;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+}
+
+[class^="parallax-"] {
+  //height: 400px;
+  //margin: 1px 0;
+  //background: url('../img/fabc-banner-1.jpg') 50% 50% no-repeat;
+  //background-size: cover;
+  //width: 100%;
+  //height: calc(100vh - 200px);
+}
+
+.parallax {
+  max-height: 500px !important;
+  min-height: 400px !important;
+}

@@ -1,0 +1,946 @@
+/*
+=======================================================================
+============================ Structure ================================
+=======================================================================
+*/
+
+body {
+  font-family: $base-font;
+  color: $medium-gray;
+}
+
+header {
+
+  > p {
+    font-family: $heading-font-regular;
+  }
+}
+
+.header-wrapper {
+  background: $primary-color;
+}
+
+.header-intro {
+  background: $white;
+
+  .banner-wrap {
+    //height: calc(80vh - 50px);
+  }
+}
+
+.page-wrapper {
+  margin: 0 auto;
+  padding: 0;
+}
+
+//.header-intro {
+//  height: 100vh;
+//}
+
+#subpage {
+
+  main {
+    //background: $white;
+    //box-shadow: 0 0 20px rgba(0,0,0,.2);
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    //max-width: 75rem;
+  }
+}
+
+.logo {
+  position: relative;
+  background: url("../img/fabc-logo.png") no-repeat;
+  height: 257px !important;
+  width: 211px;
+  //top: 9rem;
+  left: 5rem;
+  z-index: 10;
+  @include transition(all .25s ease-in-out);
+
+  &:hover {
+    top: 10rem;
+  }
+
+  .is-hidden & {
+    background: url("../img/fabc-joy-logo-small.png") no-repeat;
+    height: 42px !important;
+    left: 5rem;
+    top: 2.65rem;
+    width: 175px;
+  }
+
+  //img {
+  //  //position: absolute;
+  //  top: 2rem;
+  //  left: 3rem;
+  //  z-index: 10;
+  //
+  //}
+}
+
+.cd-auto-hide-header {
+
+  .logo-small {
+
+    #logo {
+      background: url("../img/fabc-joy-logo-small.png") no-repeat;
+      height: 42px !important;
+      left: 5rem;
+      top: 2.65rem !important;
+      width: 175px;
+    }
+  }
+}
+
+.columns,
+.column {
+
+  &.end {
+    padding-right: 0;
+  }
+
+  &.begin {
+    padding-left: 0;
+  }
+}
+
+.columns {
+
+  &.text-center {
+
+    article {
+
+      align-items: center;
+
+      h2 {
+
+        margin-bottom: 0;
+
+        &:after {
+          left: 0;
+          margin: 0 auto;
+          right: 0;
+          height: 2px;
+          width: 3rem;
+        }
+      }
+    }
+
+  }
+
+  article,
+  nav,
+  .content-item,
+  div {
+
+    h2 {
+      //border-bottom: 1px solid $light-gray;
+      margin-bottom: 2.5rem;
+      padding-bottom: .5rem;
+      position: relative;
+
+      &:after {
+        background: rgba(255,255,255,.5);
+        content: '';
+        position: absolute;
+        bottom: -.5rem;
+        left: 0;
+        height: 2px;
+        width: 3rem;
+      }
+    }
+
+    //.text-center & {
+    //  color: #000;
+    //}
+
+    h3 {
+      margin-top: .5rem;
+      margin-bottom: 2rem;
+      padding-bottom: .75rem;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+    }
+  }
+}
+
+//.end article {
+//  background: url('../img/fabc-banner-1.jpg') 50% 50% no-repeat;
+//  position: relative;
+//  z-index: -1;
+//}
+
+.column {
+
+  article,
+  nav {
+    //background: #efefef;
+    padding: 3.5rem;
+    position: relative;
+  }
+
+  h2 {
+    margin-bottom: 3rem;
+  }
+
+  &.end, &.begin {
+    //border-bottom: 1px solid $white;
+    //border-top: 1px solid $white;
+    padding-right: 0;
+    position: relative;
+  }
+
+  //&.end {
+  //  padding-right: 0;
+  //}
+  //
+  //&.begin {
+  //  padding-left: 0;
+  //}
+}
+
+//#subpage .main-content-wrap,
+//footer {
+//  background: $white;
+//}
+#subpage .main-content-wrap {
+  background: $white;
+}
+
+.main-content-wrap {
+
+  //&:hover .content-item .button.v-stretch {
+  //  box-shadow: 0 0 10px rgba(0,0,0,.25);
+  //}
+
+  background: $white;
+
+  //#subpage & {
+  //  background: $white;
+  //}
+
+  .content-item-wrap:not([class*="callout"]) {
+    //background: $light-gray;
+    //min-height: 500px;
+    padding-right: 3.5rem;
+    -moz-transition: all .35s ease-in-out;
+    -webkit-transition: all .35s ease-in-out;
+    transition: all 1s ease-in-out;
+
+    &:hover {
+      background-color: $white;
+
+    }
+
+    &.light {
+      background: $light-tan;
+    }
+
+    &.medium {
+      background: darken($light-tan, 3%);
+    }
+
+    &.dark {
+      background: darken($light-tan, 6%);
+    }
+
+    &.blue {
+      background: $dark-blue;
+
+    }
+  }
+}
+
+//.main-content-wrap {
+//
+//  .content-item-wrap:not([class*="sidebar"]) {
+//    //background: $light-gray;
+//    //min-height: 500px;
+//    padding-right: 3.5rem;
+//    -moz-transition: all .35s ease-in-out;
+//    -webkit-transition: all .35s ease-in-out;
+//    transition: all 1s ease-in-out;
+//
+//    &:hover {
+//      background-color: $white;
+//
+//    }
+//
+//    &.light {
+//      background: $light-tan;
+//    }
+//
+//    &.medium {
+//      background: darken( $light-tan, 3% );
+//    }
+//
+//    &.dark {
+//      background: darken( $light-tan, 6% );
+//    }
+//
+//    &.blue {
+//      background: $dark-blue;
+//
+//    }
+//  }
+//}
+
+.content-item-wrap {
+
+  &.sidebar {
+    //background: darken( $light-tan, 5% );
+    background: $secondary-color;
+    padding-left: 4.5rem;
+
+    &:hover {
+      background: $secondary-color !important;
+    }
+
+    h2, h3, p, li, a {
+      color: $white;
+    }
+  }
+}
+
+.content-item {
+  padding: 0 3.5rem 12rem;
+  //position: relative;
+
+
+  &.full {
+    padding: 0 0 12rem;
+  }
+
+  &.no-button {
+    padding-bottom: 5rem;
+  }
+
+  h2, h3 {
+    //border-top: 1px solid rgba(0, 0, 0, .075);
+    //border-top: 1px solid rgba(196,68,39,.1);
+    padding-top: 3.5rem;
+
+    .content-img & {
+      padding-top: 3.5rem;
+    }
+  }
+
+  nav & {
+    padding-top: 0;
+  }
+
+  footer & {
+    padding-bottom: 5rem;
+
+    ul {
+
+      a {
+        color: rgba(255, 255, 255, .75);
+        display: block;
+
+        &:hover {
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+
+    }
+
+    strong {
+      color: rgba(255, 255, 255, .75);
+    }
+  }
+}
+
+.content-item.sermon-player  {
+  padding: 0;
+}
+
+.content-img {
+
+  img {
+    margin-left: -.9rem;
+    //transform: translateY(-2.5rem);
+  }
+}
+
+.content-bg-img {
+  background-size: cover;
+}
+
+.content-bg-img-1 {
+  //background: url("../img/overlay-d.png"), url('../img/fabc-banner-1-bw.jpg') 50% 50%;
+  background: url("../img/overlay-a.png"), url('../img/fabc-banner-1-bw.jpg') 50% 50%;
+  background-repeat: repeat, no-repeat;
+}
+
+.content-bg-img-2 {
+  //background: url("../img/overlay-d.png"), url('../img/fabc-banner-1-bw.jpg') 50% 50%;
+  background: url("../img/overlay-a.png"), url('../img/fabc-banner-2-bw.jpg') 50% 50%;
+  background-repeat: repeat, no-repeat;
+}
+
+.quick-links {
+  background: $tertiary-color;
+  height: calc(84vh - 180px);
+  padding: 0;
+  position: relative;
+
+  a {
+    color: $white;
+    display: block;
+    letter-spacing: 2px;
+    list-style-type: none;
+    align-self: stretch;
+    flex-basis: 7%;
+    //display: -webkit-flex;
+    //display: -ms-flexbox;
+    //display: flex;
+    font-family: $base-font-bolder;
+    font-size: .9rem;
+    font-weight: 100;
+    //margin: 0 auto;
+    //left: 0;
+    //right: 0;
+    //-webkit-flex-wrap: nowrap;
+    //-ms-flex-wrap: nowrap;
+    //flex-wrap: nowrap;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    top: 42%;
+    text-transform: uppercase;
+    //-webkit-flex: 0 0 auto;
+    //-ms-flex: 0 0 auto;
+    //flex: 0 0 auto;
+    //height: 100%;
+    //width: 100%;
+    /* Safari */
+    -webkit-transform: rotate(90deg);
+
+    /* Firefox */
+    -moz-transform: rotate(90deg);
+
+    /* IE */
+    -ms-transform: rotate(90deg);
+
+    /* Opera */
+    -o-transform: rotate(90deg);
+
+    transform: rotate(90deg);
+
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  }
+}
+
+.worship-times-callout {
+  background: $dark-blue;
+  //max-height: 700px !important;
+  //min-height: 600px;
+}
+
+.sunday-sermon-callout {
+  background: $secondary-color;
+  //max-height: 600px !important;
+  //min-height: 500px;
+
+  h2, p, strong {
+    color: $white;
+
+    &:after {
+      //background: $dark-blue !important;
+    }
+  }
+}
+
+.current-events-callout, .sunday-sermon-callout {
+  background: $dark-blue;
+  //max-height: 800px !important;
+  //min-height: 700px;
+}
+
+.ministries-callout {
+  background: $dark-gray;
+  //max-height: 800px !important;
+  //min-height: 700px;
+}
+
+.ministries {
+
+  li {
+    line-height: 2.5;
+    position: relative;
+
+    a {
+      //background: rgba(255,255,255,.25);
+      //border-left: 2px solid transparent;
+      display: block;
+      font-size: .9rem;
+      font-weight: 800;
+      margin-top: .25rem;
+      margin-bottom: .25rem;
+      padding: 0 .95rem;
+      text-transform: uppercase;
+
+      &:after {
+        content: "";
+        background: transparent;
+        left: 0;
+        height: 60%;
+        width: 2px;
+        top: 20%;
+        position: absolute;
+        transition: background-color .5s ease-in-out;
+      }
+
+      &:hover {
+        //background: rgba(255,255,255,.75);
+        //background: lighten( $light-tan, 7% );
+        //border-bottom: 1px dotted rgba(0,0,0,.05);
+        //border-left: 2px solid $secondary-color;
+        //padding-left: 1rem;
+
+        &:after {
+          content: "";
+          background: $secondary-color;
+          left: 0;
+          height: 60%;
+          width: 2px;
+          top: 20%;
+          position: absolute;
+        }
+      }
+    }
+  }
+}
+
+//.worship-times-callout {
+//
+//}
+//
+//.current-events-callout {
+//
+//}
+//
+//.ministries-callout {
+//
+//}
+
+.vh-100 {
+  height: 100%;
+}
+
+.overlay-a,
+.overlay-b,
+.overlay-c,
+.overlay-d,
+.overlay-e,
+.overlay-f,
+.overlay-g,
+.overlay-h {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  right: 0;
+  transition: background-color 1s ease-in-out;
+}
+
+.overlay-a {
+  background: rgba(0, 0, 0, .65);
+}
+
+.overlay-b {
+  //background: url("../img/overlay-b.png") repeat;
+  background: rgba(0, 0, 0, .65);
+
+  &:hover {
+    background: rgba(0, 0, 0, .25);
+  }
+}
+
+.overlay-c {
+  background: rgba(0, 0, 0, .65);
+  transition: background-color 1s ease-in-out;
+
+  //&:hover {
+  //  background: rgba(0, 0, 0, .25);
+  //}
+}
+
+.overlay-d {
+  background: url("../img/overlay-d.png") repeat;
+}
+
+.overlay-e {
+  background: url("../img/overlay-e.png") repeat;
+}
+
+.overlay-f {
+  background: url("../img/overlay-f.png") repeat;
+}
+
+.overlay-g {
+  background: url("../img/overlay-g.png") repeat;
+}
+
+.overlay-h {
+  background: url("../img/overlay-h.png") repeat;
+}
+
+.overlay-h {
+  background: url("../img/overlay-h.png") repeat;
+}
+
+.text-inverted {
+  color: $white;
+}
+
+.intro {
+  background: $white;
+  padding-bottom: 10rem;
+  padding-top: 5rem;
+  position: relative;
+  z-index: 99999;
+
+  h1 {
+    text-transform: uppercase;
+
+    span {
+      font-size: 1.25rem;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.intro-text {
+
+  h1 {
+    font-size: 4.5rem;
+    line-height: .6;
+    margin-bottom: 7rem;
+    position: relative;
+
+    &:after {
+      background: $secondary-color;
+      content: '';
+      margin: 0 auto;
+      position: absolute;
+      bottom: -2rem;
+      left: 0;
+      right: 0;
+      height: 2px;
+      width: 3rem;
+    }
+  }
+
+  p {
+    font-size: 1.35rem;
+
+    //span {
+    //  font-family: $heading-font-regular;
+    //  //font-style: italic;
+    //}
+  }
+}
+
+.intro-img {
+  margin-top: -10rem;
+  position: relative;
+  z-index: 99;
+
+  img {
+    display: block;
+    margin: 0 auto 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    color: $dark-blue;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  //img {
+  //  border: 3px solid $white;
+  //}
+}
+
+.content-item
+
+.news-link {
+
+  li {
+    margin-bottom: 1rem;
+  }
+
+  h4 {
+    color: $link-color;
+    margin-bottom: 0;
+  }
+
+}
+
+.grid-4 {
+  padding: 0.9375rem;
+
+  li {
+
+  }
+}
+
+.pastors-desk {
+  background: $secondary-color;
+  background-repeat:  no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+  transition: all .75s ease-in-out;
+}
+
+.ministries-4 {
+
+  .column, .columns {
+    height: 100px;
+    //border-left: 1px solid $white;
+    padding: 0;
+
+    * {
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      height: 100%;
+      display: flex;
+    }
+  }
+}
+
+.bookstore a,
+.n2n a,
+.bw-watkins a,
+.credit-union a {
+  color: $white;
+  font-family: $base-font-bolder;
+  line-height: 1.1;
+}
+
+.bookstore {
+  background: #D7AA15;
+}
+
+.n2n {
+  background: #00577A;
+}
+
+.bw-watkins {
+  background: #A1341B;
+}
+
+.credit-union {
+  background: #585F32;
+}
+
+//footer {
+//  background: $white;
+//}
+
+/*=================================
+
+         Media Queries
+
+==================================*/
+
+@media screen and (min-width: 90em) {
+
+  .page-wrapper {
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    border-left: 1px solid rgba(0, 0, 0, .1);
+    border-right: 1px solid rgba(0, 0, 0, .1);
+    max-width: 96rem;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 105em) {
+
+  .page-wrapper {
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    border-left: 1px solid rgba(0, 0, 0, .1);
+    border-right: 1px solid rgba(0, 0, 0, .1);
+    max-width: 100rem;
+    padding: 0;
+  }
+
+  .cd-auto-hide-header {
+    max-width: 100rem;
+  }
+}
+
+@media screen and (min-width: 120em) {
+
+  .page-wrapper {
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    border-left: 1px solid rgba(0, 0, 0, .1);
+    border-right: 1px solid rgba(0, 0, 0, .1);
+    max-width: 110rem;
+    //padding: 30px;
+  }
+
+  .cd-auto-hide-header {
+    max-width: 109.9rem;
+  }
+}
+
+@media screen and (min-width: 105em) {
+
+  //.page-wrapper {
+  //  box-shadow: 0 0 20px rgba(0,0,0,.2);
+  //  border-left: 1px solid rgba(0, 0, 0, .1);
+  //  border-right: 1px solid rgba(0,0,0,.1);
+  //  max-width: 110rem;
+  //  padding: 0;
+  //}
+  //.logo {
+  //  position: relative;
+  //
+  //  img {
+  //    position: absolute;
+  //    top: 2rem;
+  //    left: 7rem;
+  //    z-index: 10;
+  //  }
+  //}
+
+}
+
+@media screen and (max-width: 90em) {
+
+  .logo {
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 2rem;
+      left: 1rem;
+      z-index: 10;
+    }
+  }
+
+}
+
+@media screen and (max-width: 75em) {
+
+  .column {
+
+    article {
+      padding: 3.5rem 1rem;
+    }
+  }
+
+  .logo {
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 2rem;
+      left: 0;
+      z-index: 10;
+    }
+  }
+}
+
+@media screen and (max-width: 64em) {
+
+  .column {
+
+    article {
+      padding: 1.5rem;
+    }
+
+    &.end {
+      padding-left: 0;
+    }
+  }
+
+  .logo {
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      z-index: 10;
+    }
+  }
+  .intro-text {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 40em) {
+
+  .page-wrapper {
+    padding: 10px;
+  }
+  .column,
+  .columns {
+    flex: 100% !important;
+
+    article.content-item {
+      min-height: 370px;
+      padding: 0;
+    }
+  }
+
+  .intro {
+    padding-bottom: 2rem;
+  }
+
+  .intro-text h1 {
+    font-size: 3.75rem;
+    margin-bottom: 4rem;
+  }
+
+  .content-item {
+    padding: 0;
+
+    &.vh-100 {
+      padding-bottom: 8rem !important;
+    }
+
+    h2, h3 {
+      padding-top: 1.5rem;
+    }
+
+    .v-stretch {
+      bottom: 0;
+      left: 1.5rem;
+      min-width: 80%;
+      padding: 1.75rem;
+      right: 1.5rem;
+    }
+  }
+
+  .news-link {
+
+    h4 {
+      font-size: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 1px;
+      padding: .25rem .5rem;
+      background: rgba(255, 255, 255, .5);
+    }
+  }
+
+  .main-content-wrap .content-item-wrap:not([class*="callout"]),
+  footer .content-item-wrap:not([class*="callout"],.sidebar) {
+    padding-right: 0.9375rem;
+  }
+}
+
